@@ -107,7 +107,7 @@
 }
 
 /*
-! tailwindcss v3.4.15 | MIT License | https://tailwindcss.com
+! tailwindcss v3.4.16 | MIT License | https://tailwindcss.com
 */
 
 /*
@@ -554,34 +554,318 @@ video {
   display: none;
 }
 
-body{
-  padding: 0;
-  margin: 0;
-  background-color: #000;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh
+html {
+  scroll-behavior: smooth;
 }
 
-h1{
-  color: #484848;
-  font-size: 50px;
-  font-weight: bold;
+/*--------------------------------------header-------------------------------------------*/
+
+/* Custom Styles for the Video */
+
+.background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  z-index: -1;
+  /* Places it behind the content */
+}
+
+/*navbar logo*/
+
+.ectopia-navbar span {
   font-family: monospace;
+}
+
+/*neon title*/
+
+.ectopia h1 {
+  color: #484848;
+  font-size: 100px;
+  font-weight: bold;
   letter-spacing: 7px;
-  cursor: pointer
+  cursor: pointer;
 }
 
-h1 span{
-  transition: .5s linear
+.ectopia h1 span {
+  transition: 0.5s linear;
 }
 
-h1:hover span{
+.ectopia h1:hover span {
   margin-right: 5px;
   margin-left: 30px;
   color: #fff;
-  text-shadow: 0 0 10px #fff,
-        0 0 20px #fff,  
-        0 0 40px #fff
+  text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #fff;
+}
+
+/*---------------------------------Welcome to ectopia------------------------------------------*/
+
+#welcome-section {
+  position: relative;
+  height: 100vb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding-top: 3rem;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+#journey {
+  font-family: Space Grotesk;
+  animation: blink 2.5s linear infinite;
+  text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #fff;
+}
+
+#blog {
+  font-family: Space Grotesk;
+}
+
+/*--------------------------------------------3d card-------------------------------------------------*/
+
+* {
+  box-sizing: border-box;
+}
+
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: system-ui, sans-serif;
+  perspective: 1500px;
+  background: none;
+}
+
+.card img {
+  padding: 1em;
+  color: #181a1a;
+  width: 300px;
+  height: 400px;
+  box-shadow: 0 1px 5px #00000099;
+  border-radius: 10px;
+  background-size: cover;
+  transition-duration: 300ms;
+  transition-property: transform, box-shadow;
+  transition-timing-function: ease-out;
+  transform: rotate3d(0);
+}
+
+.card:hover {
+  transition-duration: 150ms;
+  box-shadow: 0 5px 20px 5px #00000044;
+}
+
+.card .glow {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-image: radial-gradient(circle at 50% -20%, #ffffff22, #0000000f);
+}
+
+/*---------------------------------3d slider----------------------------------------------------*/
+
+.banner {
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+  position: relative;
+}
+
+.banner .slider {
+  position: absolute;
+  width: 200px;
+  height: 300px;
+  top: 10%;
+  left: calc(50% - 100px);
+  transform-style: preserve-3d;
+  transform: perspective(1000px);
+  animation: autoRun 15s linear infinite;
+  /* Slowed down rotation */
+  z-index: 2;
+}
+
+@keyframes autoRun {
+  from {
+    transform: perspective(1000px) rotateY(0deg);
+  }
+
+  to {
+    transform: perspective(1000px) rotateY(360deg);
+  }
+}
+
+.banner .slider .item {
+  position: absolute;
+  inset: 0;
+  transform: rotateY(
+      calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg)
+    )
+    translateZ(300px);
+  opacity: 0.7;
+  /* De-emphasized by default */
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.banner .slider .item img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+/* Highlight the image at the front dynamically */
+
+.banner .slider:hover .item {
+  transform: rotateY(
+      calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg)
+    )
+    translateZ(400px);
+  opacity: 2;
+  /* Bring attention */
+}
+
+/*------------------------------------------main story------------------------------------------------*/
+
+.row {
+  height: 88%;
+}
+
+.col {
+  flex-basis: 50%;
+  padding: 20px;
+}
+
+#font {
+  font-family: "Space Grotesk", sans-serif;
+  color: #cbd3d4;
+}
+
+#humanitystory {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1rem;
+  text-align: justify;
+}
+
+.highlight {
+  background-color: rgba(239, 255, 16, 0.76);
+  animation: highlight-fade 3s infinite alternate;
+}
+
+@keyframes highlight-fade {
+  0% {
+    background-color: rgba(251, 255, 16, 0.76);
+  }
+
+  100% {
+    background-color: rgba(255, 255, 0, 0);
+  }
+}
+
+.col .card {
+  width: 220px;
+  height: 260px;
+  display: inline-block;
+  border-radius: 10px;
+  padding: 15px 20px;
+  margin: 10px;
+  background-color: #1e293b;
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  font-family: "Space Grotesk", sans-serif;
+  transition: transform 0.3s, box-shadow 0.3s;
+  overflow: hidden;
+}
+
+.col .card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+}
+
+.col .card p {
+  padding: 5px;
+  border-radius: 5px;
+}
+
+/*------------------------------------------the collapse----------------------------------------------------------*/
+
+#the-great-collapse {
+  font-family: Space Grotesk;
+}
+
+.list {
+  background-color: #0c0f20;
+  margin: 30px auto;
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(230px, 1fr)
+  );
+  /* Flexible column size */
+  gap: 30px;
+  justify-content: center;
+  align-content: center;
+  padding: 20px;
+}
+
+.item {
+  color: #c7c3c3;
+  font-family: Space Grotesk;
+  position: relative;
+  transition: 0.5s;
+}
+
+.item img {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: 0.5s;
+}
+
+.item:hover img {
+  transform: scale(1.2);
+}
+
+.item .content {
+  position: absolute;
+  bottom: 0;
+  color: #fff;
+  padding: 20px;
+  transform: translateY(100px);
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.item:hover .content {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.list:hover .item:not(:hover) {
+  filter: blur(8px);
+}
+
+/*----------------------------------------------elite files---------------------------------------------*/
+
+#elite-files {
+  font-family: Space Grotesk;
+}
+
+#enemy {
+  text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #fff;
 }
