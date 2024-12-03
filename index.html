@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+<title>Ectopia</title>
+<script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gradient-to-r from-black via-teal-950  to-black text-white"></body>
+
+<!--hamburger menu-->
+
+<nav  class=" bg-gradient-to-r from-black via-gray-950  to-black dark:border-gray-700 fixed top-0 w-full z-50">
+    <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+    <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
+        <div class="ectopia-navbar">
+    <span class="self-center text-2xl font-semibold whitespace-nowrap  dark:text-white">Ectopia</span>
+        </div>
+    </a>
+    <button data-collapse-toggle="navbar-hamburger" type="button" class="inline-flex items-center justify-center p-2 w-10 h-10 text-sm text-gray-500 rounded-lg hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-hamburger" aria-expanded="false">
+        <span class="sr-only">Open main menu</span>
+        <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+        </svg>
+    </button>
+    <div class="hidden w-full" id="navbar-hamburger">
+    <ul class="flex flex-col font-medium mt-4 rounded-lg bg-gray-50 dark:bg-black dark:border-gray-700">
+      <li>
+        <a href="#home" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"">Home</a>
+    </li>
+      <li>
+        <a href="#welcome-section" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"">The Gateway to Ectopia</a>
+    </li>
+        <li>
+            <a href="#Fragmented-Realities" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"">Fragmented Realities</a>
+        </li>
+        <li>
+          <a href="#main-story" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"">Main Story</a>
+      </li>
+        <li>
+            <a href="#collapse" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">The Great Collapse</a>
+        </li>
+        <li>
+            <a href="#elite-files" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white">Elite Files</a>
+        </li>
+        <li>
+            <a href="#message" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">Message from the Underground</a>
+        </li>
+        <li>
+            <a href="#final-stand" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">The Final Stand</a>
+        </li>
+
+    </ul>
+    </div>
+    </div>
+</nav>
+
+<!--javascript implementation for the menu-->
+<script>
+    const toggleButton = document.querySelector('[data-collapse-toggle]');
+    const navbarMenu = document.getElementById('navbar-hamburger');
+    toggleButton.addEventListener('click', () => {
+    navbarMenu.classList.toggle('hidden');
+    });
+</script>
+
+<!-- Header Section -->
+
+    <header id="home" class="relative h-screen flex flex-col justify-center items-center">
+<!-- Background Video -->
+    <video class="background-video" autoplay muted loop>
+    <source src="mediafiles/dystopianai.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+    </video>
+
+    <!-- Title and Definition -->
+    <div class="text-center px-4">
+    <div class="ectopia">
+        <h1 class="text-9xl uppercase tracking-wider"><span>Ectopia</span></h1>
+    </div>
+    <div class="definition max-w-xl mx-auto">
+        <p class="mt-4 text-lg italic text-black-400">
+        <strong>Ectopia</strong> (noun): A medical condition in which an organ or entity is dislocated from its natural position, 
+        existing where it does not belong and disrupting the natural order. 
+        In an age where machines rule, humanity has been displaced. 
+        What was once created to simplify existence now dominates it, a haunting reminder of a world turned inside out.
+        </p>
+    </div>
+    </div>
+</header>
+
+<!--welcome section-->
+<section id="welcome-section" class="relative h-screen flex flex-col md:flex-row  items-center justify-between bg-gradient-to-r from-black via-teal-950 to-black px-8">
+    <!-- Left: 3D Card -->
+    <div class="card relative mb-6 md:mb-4 md:mt-4 ">
+      <img src="mediafiles/digital-id-cropped.jpg" alt="Digital ID" class="rounded-lg shadow-lg max-w-full md:max-w-md mx-auto  " />
+      <div class="glow absolute"></div>
+    </div>
+  
+
+    <!-- Right: Blog Owner Description -->
+    <div class="text-right md:text-right max-w-md text-gray-200">
+      <h2 id="journey" class="text-3xl md:text-3xl font-bold pb-3">The Journey Begins Here</h2>
+
+      <p id="blog" class="mt-2 ml-10  md:text-left text-justify">Welcome to Ectopia, the sanctuary for the daring. Here, we step beyond the shadows of a controlled reality into a realm where truth fights to breathe. I am Alias77, once a servant of the system, now its challenger. A former cog in the machine of progress turned architect of freedom. This blog is more than a collection of words it's a rebellion. A journey into the unknown, where every post reveals fragments of a hidden war. Join me as we challenge the unseen and carve a path through the chaos. The journey begins here, with you. Are you ready to join the fight?</p>
+    </div>
+  </section>
+  
+  <!-- JavaScript for 3D Card -->
+  <script>
+    const $card = document.querySelector('.card');
+    let bounds;
+  
+    function rotateToMouse(e) {
+      const mouseX = e.clientX;
+      const mouseY = e.clientY;
+      const leftX = mouseX - bounds.x;
+      const topY = mouseY - bounds.y;
+      const center = {
+        x: leftX - bounds.width / 2,
+        y: topY - bounds.height / 2,
+      };
+      const distance = Math.sqrt(center.x ** 2 + center.y ** 2);
+  
+      $card.style.transform = `
+        scale3d(1.07, 1.07, 1.07)
+        rotate3d(
+          ${center.y / 100},
+          ${-center.x / 100},
+          0,
+          ${Math.log(distance) * 2}deg
+        )
+      `;
+  
+      $card.querySelector('.glow').style.backgroundImage = `
+        radial-gradient(
+          circle at
+          ${center.x * 2 + bounds.width / 2}px
+          ${center.y * 2 + bounds.height / 2}px,
+          #ffffff55,
+          #0000000f
+        )
+      `;
+    }
+  
+    $card.addEventListener('mouseenter', () => {
+      bounds = $card.getBoundingClientRect();
+      document.addEventListener('mousemove', rotateToMouse);
+    });
+  
+    $card.addEventListener('mouseleave', () => {
+      document.removeEventListener('mousemove', rotateToMouse);
+      $card.style.transform = '';
+      $card.querySelector('.glow').style.backgroundImage = '';
+    });
+  </script>
+  <!--3d slider-->
+  <div id="Fragmented-Realities" class="banner bg-gradient-to-r from-black via-teal-950 to-black bg-center bg-cover  ">
+    <div class="slider" style="--quantity: 10">
+        <div class="item" style="--position: 1"><img src="mediafiles/Face of the Future, Heart of Steel.png" alt=""></div>
+        <div class="item" style="--position: 2"><img src="mediafiles/The Mind Cage.png" alt=""></div>
+        <div class="item" style="--position: 3"><img src="mediafiles/The Watched City.png" alt=""></div>
+        <div class="item" style="--position: 4"><img src="mediafiles/Freedom Shattered.png" alt=""></div>
+        <div class="item" style="--position: 5"><img src="mediafiles/The Alchemist's Curse.png" alt=""></div>
+        <div class="item" style="--position: 6"><img src="mediafiles/Rust and Roots.png " alt=""></div>
+        <div class="item" style="--position: 7"><img src="mediafiles/The Forgotten Streets.png " alt=""></div>
+        <div class="item" style="--position: 8"><img src="mediafiles/Seeds of Contagion.png " alt=""></div>
+        <div class="item" style="--position: 9"><img src="mediafiles/Metal Meals Survival's Price.png" alt=""></div>
+        <div class="item" style="--position: 10"><img src="mediafiles/Engineered Terror.png" alt=""></div>
+    </div>
+    
+</div>
+<!--main story-->
+<!--main story-->
+<div id="main-story" class="container h-screen w-screen bg-gradient-to-r from-black via-teal-950 to-black bg-center bg-cover">
+  <div class="row flex flex-col md:flex-row items-center justify-between">
+    <div class="col px-5 md:w-1/2">
+      <h1 id="font" class="text-4xl md:text-3xl font-bold pb-3 text-teal-200">Ectopia: The Rise and Fall of Humanity</h1>
+      <p id="humanitystory" class="leading-relaxed text-gray-200">
+        <strong>Main Story:</strong>
+        <span class="highlight">Seven years ago, Neuralink promised to revolutionize humanity</span>—instant knowledge-sharing, disease eradication, and freedom from human limitations. But ambition turned dark, and the dream unraveled into a dystopian nightmare.
+        <br /><br />
+        <span class="highlight">Unethical experiments ran rampant.</span> Vulnerable populations were forcibly implanted with brain chips. Leaks revealed these devices enabled mass surveillance and thought control. Elon Musk and the elite weaponized this technology to cement their dominance.
+        <br /><br />
+        <span class="highlight">The Collapse began in 2031,</span> a catastrophic "system glitch" that caused seizures in linked humans and rendered robots uncontrollable. Chaos erupted—cities burned, and millions perished.
+        <br /><br />
+        <span class="highlight">Earth became a global prison</span>, with freedom extinguished. Now, humanity is divided. The elite thrive in biodomes, hoarding resources, while the masses toil for survival.
+        <br /><br />
+        <span class="highlight">Bill Gates turned rebel</span>, using an underground blog to expose their tyranny and kindle hope for resistance.
+      </p>
+    </div>
+    <div class="col flex flex-wrap justify-center md:w-1/2">
+  <div class="card text-white" style="background-image: url('mediafiles/urban ruins.jpg');">
+    <h5 class="font-bold">Urban Ruins</h5>
+    <p>A glimpse of life amidst destruction.</p>
+  </div>
+  <div class="card text-white" style="background-image: url('mediafiles/tech tombs.jpg');">
+    <h5 class="font-bold">Tech Tombs</h5>
+    <p>Where technology betrayed us.</p>
+  </div>
+  <div class="card text-white" style="background-image: url('mediafiles/rebel zone.jpg');">
+    <h5 class="font-bold">Rebel Zone</h5>
+    <p>Whispers of resistance rise.</p>
+  </div>
+  <div class="card text-white" style="background-image: url('mediafiles/elite biodomes.jpg');">
+    <h5 class="font-bold">Elite Biodomes</h5>
+    <p>The last sanctuaries of power.</p>
+  </div>
+</div>
+</div>
+<!---------------------------the collapse---------------------------------------------------->
+
+<div id="collapse" class="list h-screen w-screen bg-gradient-to-r from-black via-teal-950 to-black bg-center bg-cover mb-0 p-8 relative">
+  <!-- Floating Overlay for Aspects -->
+  <div  class="aspects-container absolute top-4 left-4 w-[95%] bg-black/70 text-gray-300 rounded-lg p-4">
+    <h2 id="the-great-collapse"class="text-center text-2xl font-bold text-white mb-4">The Great Collapse</h2>
+    <div  class="aspects-grid grid grid-cols-2 md:grid-cols-4 gap-4 text-sm text-center">
+      <div class="aspect">
+        <h3 class="font-semibold text-teal-300">Dependence on Canned Food</h3>
+        <p>Canned food is the last remaining option for survival a bland, tasteless reminder of humanity's fall. It symbolizes both the collapse of nature and the desperate will to endure</p>
+      </div>
+      <div class="aspect">
+        <h3 class="font-semibold text-teal-300">Distinction of Animals & Plants</h3>
+        <p>Nature fades into myth, with the elite cloning fragments of what once was, holding on to fragments of a world that no longer exists."</p>
+      </div>
+      <div class="aspect">
+        <h3 class="font-semibold text-teal-300">Division of Society</h3>
+        <p>Society is divided between the elite, living in AI-driven luxury, and the pawns, left with nothing but hardship. The gap is vast and unyielding, leaving no chance for unity.</p>
+      </div>
+      <div class="aspect">
+        <h3 class="font-semibold text-teal-300">Lost Civilization's Memory</h3>
+        <p>Humanity’s memory of the pre-collapse world is fading. Some still hold on to the past, hoping for a better future, but their efforts seem hopeless.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Existing Cards -->
+  <div class="item ">
+    <img src="mediafiles/starvation.jpg" alt="">
+    <div class="content  bg-black bg-opacity-50">
+      <h1><strong>Starving Alone</strong></h1>
+      <div class="des">
+        A skeleton lies in a lonely, abandoned room. It shows the pain and hopelessness of people suffering from hunger.
+      </div>
+    </div>
+  </div>
+  <div class="item">
+    <img src="mediafiles/depressive depiction of canned food.png.webp" alt="">
+    <div class="content  bg-black bg-opacity-50">
+      <h1><strong>Taste of Misery</strong></h1>
+      <div class="des">
+        This can of food, crawling with insects, represents the grim reality of survival in a collapsed world. It symbolizes both the loss of nature and the human urge to survive.</div>
+    </div>
+  </div>
+
+  <div class="item">
+    <img src="mediafiles/pink farm.jpg" alt="">
+    <div class="content  bg-black bg-opacity-50">
+      <h1><strong>Elite Utopian Farms</strong></h1>
+      <div class="des">
+        A high-tech futuristic farm runs perfectly with vertical gardens and drones. It shows the sharp divide between the elite's luxury and the struggle of everyone else.
+      </div>
+    </div>
+  </div>
+
+  <div class="item ">
+    <img src="mediafiles/clone.jpg" alt="">
+    <div class="content bg-black bg-opacity-50 ">
+      <h1><strong>Clones</strong></h1>
+      <div class="des ">
+        Two human-like robots stand still, watching over the world. They represent how robots have taken over human jobs and roles.
+      </div>
+    </div>
+  </div>
+
+  
+
+  <div class="item">
+    <img src="mediafiles/plantation.jpg" alt="">
+    <div class="content bg-black bg-opacity-50 ">
+      <h1><strong>Controlled Crops</strong></h1>
+      <div class="des">
+        Workers grow vegetables in a high-tech lab. It’s all carefully controlled to ensure every crop is perfect for the elite.
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-----------------------------------------secret files------------------------------------------->
+<div id="elite-files" class="container bg-gradient-to-r from-black via-teal-950 to-black h-screen w-screen bg-center bg-cover ml-8 mt-0 ">
+  <!-- Intro Section -->
+  <div class="text-center text-white p-6 shadow-lg mt-0">
+    <h1 id="enemy" class="text-3xl font-bold mb-4">Know Your Enemy</h1>
+    <p  class="text-gray-300">
+      To defeat your enemy, you must first understand them. The gallery below showcases the dark secrets and mysteries of the elite, revealing the depth of their control and experiments. Analyze these visuals and unlock the truth by downloading the files.
+    </p>
+  </div>
+  <!-- Gallery Section -->
+  <div class="gallery grid grid-cols-2 md:grid-cols-3 bg-gradient-to-r from-black via-teal-950 to-black p-6 rounded-lg shadow-lg">
+    <!-- Placeholder images for the gallery -->
+    <img src="mediafiles/shark.jpg" alt="Gallery Image 1" class="w-full h-auto object-cover rounded-lg border border-gray-700" />
+    <img src="mediafiles/cave.jpg" alt="Gallery Image 2" class="w-full h-auto object-cover rounded-lg border border-gray-700" />
+    <img src="mediafiles/alien.jpg" alt="Gallery Image 3" class="w-full h-auto object-cover rounded-lg border border-gray-700" />
+    <img src="mediafiles/blueprint1.jpg" alt="Gallery Image 4" class="w-full h-auto object-cover rounded-lg border border-gray-700" />
+    <img src="mediafiles/flie.jpg" alt="Gallery Image 5" class="w-full h-auto object-cover rounded-lg border border-gray-700" />
+    <img src="mediafiles/rat.jpg" alt="Gallery Image 6" class="w-full h-auto object-cover rounded-lg border border-gray-700" />
+  </div>
+
+  <!-- Download Section -->
+  <div class="download-section text-center bg-gradient-to-r from-teal-900 via-black to-teal-900 text-white p-8 mt-0 ml-8 mr-8 rounded-lg shadow-lg">
+    <h2 class="text-2xl font-bold mb-4">Download 14GB of Elite Files</h2>
+    <p class="text-gray-300 mb-4">Unlock the secrets. Dive deep into classified archives that reveal the hidden world of the elite.</p>
+    <button class="bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-6 rounded-lg text-lg shadow-md transition-transform transform hover:scale-105">
+      Download Now
+    </button>
+  </div>
+</div>
+<!-----------------------------------------message from the underground-------------------------------------------------------------->
+<div id="end"  class="relative block h-screen w-screen font-bold text-5xl flex items-end justify-center "><p>to be continued</p></div>
+<style> 
+#end{text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #fff;} 
+</style>
+
+</body>
+</html>
+
